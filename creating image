@@ -1,12 +1,17 @@
+#Importing Required Modules...
 import cv2
 import numpy as np
 img = np.zeros((400, 400, 3), dtype = "uint8")
 
+#Creating Image  by using Circle and Text...
+
+#using CIRCLE
 #cv2.circle(imageObjectName, (‘center_coordinates’), (‘circle_radius’), (‘color_in_bgr’), ‘stroke_thickness’)
 cv2.circle(img, (200, 200), 150, (255, 0, 0), 30)
 cv2.circle(img, (200, 200), 120, (0, 255, 0), 30)
 cv2.circle(img, (200, 200), 90, (0, 0, 255), 30)
 
+#using TEXT 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 #cv2.putText(imageObjectName, ‘TextContent’, (‘text_starting_point_coordinates’), ‘fontToBeUsed’, ‘font_size’, (‘text_color’, ‘text_thickness’, ‘line_type’)
