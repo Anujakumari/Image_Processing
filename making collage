@@ -1,0 +1,19 @@
+#Importing Required Modules...
+import cv2
+import numpy
+
+photo1 = cv2.imread("dog.png")
+Photo1 = photo1[30:600, 80:530]
+
+Photo2 = cv2.imread("cat.png")
+
+com_photo1 = Photo1[ : 500 ,  : 430]
+com_photo2 = Photo2[ : 500 ,  : 430]
+
+#Appending both images..
+collage_photo = numpy.append(com_photo1 , com_photo2, axis=1)
+
+#Showing images after appending..
+cv2.imshow("collage_photo" , collage_photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
