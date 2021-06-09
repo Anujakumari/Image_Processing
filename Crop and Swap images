@@ -1,0 +1,44 @@
+#Importing Required Module...
+import cv2
+
+#Image 1
+pic1 = cv2.imread("dog.png")
+pic1 = pic1[30:600, 80:530]
+pic1 = pic1[ : 500 ,  : 430]
+
+#Image 2
+pic2 = cv2.imread("cat.png")
+pic2 = pic2[ : 500 ,  : 430]
+
+#Showing Image 1
+cv2.imshow("p1",pic1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+#Showing Image 2
+cv2.imshow("p2",pic2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+#Swap
+
+pic1=cv2.imread("dog.png")
+pic2=cv2.imread("cat.png")
+temp=cv2.imread("dog.png")
+
+for i in range(100,350):
+    for j in range(120,370):
+        temp[i,j]=pic2[i,j]
+        pic2[i,j]=pic1[i,j]
+        pic1[i,j]=temp[i,j]
+        
+#Showing Image 1 after Swapping
+cv2.imshow("hiii",pic1)
+cv2.waitKey()
+cv2.destroyAllWindows() 
+
+#Showing Image 2 after Swapping
+
+cv2.imshow("hiii",pic2)
+cv2.waitKey()
+cv2.destroyAllWindows() 
