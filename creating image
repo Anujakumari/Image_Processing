@@ -1,0 +1,18 @@
+import cv2
+import numpy as np
+img = np.zeros((400, 400, 3), dtype = "uint8")
+
+#cv2.circle(imageObjectName, (‘center_coordinates’), (‘circle_radius’), (‘color_in_bgr’), ‘stroke_thickness’)
+cv2.circle(img, (200, 200), 150, (255, 0, 0), 30)
+cv2.circle(img, (200, 200), 120, (0, 255, 0), 30)
+cv2.circle(img, (200, 200), 90, (0, 0, 255), 30)
+
+font = cv2.FONT_HERSHEY_SIMPLEX
+
+#cv2.putText(imageObjectName, ‘TextContent’, (‘text_starting_point_coordinates’), ‘fontToBeUsed’, ‘font_size’, (‘text_color’, ‘text_thickness’, ‘line_type’)
+cv2.putText(img, 'ANUJA', (150, 210), font, 1.0, (0, 255, 0), 4, cv2.LINE_AA)
+
+#Showing the image....
+cv2.imshow('mypic', img)
+cv2.waitKey()
+cv2.destroyAllWindows()
